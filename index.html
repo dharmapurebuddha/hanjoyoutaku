@@ -1,13 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hanjo Youtaku</title>
-    </head>
-    <body>
-        <h1>Hanjo Youtaku</h1>
-        <script type="module" src="/main.js"></script>
-    </body>
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" href="/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hanjo Youtaku</title>
+
+<style>
+
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    border: 0 none;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+}
+#container {
+    width: 100%;
+    max-width: 1216px;
+    margin: 0 auto;
+}
+h1#welcome {
+    margin-top: 50px;
+    width: 100%;
+}
+#welcome img {
+    width: 100%;
+}
+
+.portal-container {
+    width: 100%;
+    clear: both;
+    height: 200px;
+    margin-bottom: 36px;
+}
+.portal-room {
+    float: left;
+}
+.portal-room:last-child {
+    float: right;
+}
+.portal {
+    display: block;
+}
+.session-button {
+    height: 47px;
+}
+.session-button:nth-child(1) {
+    margin-left: 85px;
+}
+.session-button:nth-child(2) {
+    margin-left: 54px;
+}
+.session-button:nth-child(3) {
+    margin-left: 27px;
+}
+
+#hello {
+    clear: both;
+    height: 1580px;
+}
+#hello img {
+    display: block;
+}
+.left {
+    float: left;
+    width: 595px;
+    text-align: right;
+}
+.right {
+    float: right;
+    width: 595px;
+    text-align: left;
+}
+
+#phd {
+    margin-top: 110px;
+
+}
+.intros {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ra-intro {
+    margin-top: 220px;
+}
+
+#questions {
+    text-align: center;
+    height: 440px;
+}
+#questions p {
+    margin-bottom: 55px;
+}
+
+#calcite {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.stories {
+    margin: 0 auto;
+}
+
+#enlightenment {
+    text-align: center;
+    height: 1155px;
+}
+
+#enlightenment p {
+    padding: 30px;
+}
+
+#enlightenment p:last-child {
+    margin-top: 20px;
+    border: 1px solid white;
+}
+
+#energy {
+    height: 800px;
+}
+
+#energy p {
+    padding-top: 25px;
+}
+
+#testimonials {
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+
+    <h1 id="welcome">
+        <img src="assets/hanjo-youtaku.png" alt="Hanjo Youtaku">
+    </h1>
+
+    <div id="portals" class="portal-container">
+
+        <div class="portal-room">
+            <a id="home-portal"
+                class="portal"
+                href="#home">
+                <img src="assets/home.png" alt="Home">
+            </a>
+        </div>
+
+        <div class="portal-room">
+            <a id="enlightenment-portal"
+                class="portal session-button"
+                href="#enlightenment">
+                <img src="assets/enlightenment.png" alt="Enlightenment">
+            </a>
+            <a id="energy-portal"
+                class="portal session-button"
+                href="#energy">
+                <img src="assets/energy.png" alt="Energy">
+            </a>
+            <a id="channeling-portal"
+                class="portal session-button"
+                href="#channeling">
+                <img src="assets/channeling.png" alt="Channeling">
+            </a>
+        </div>
+
+        <div class="portal-room">
+            <a id="contact-portal"
+                class="portal"
+                href="#contact">
+                <img src="assets/book-a-session.png" alt="Book A Session">
+            </a>
+        </div>
+    </div>
+
+
+    <div id="hello">
+        <div class="left">
+            <img class="intros"
+                src="assets/hello-i-am.png"
+                alt="Hi, I'm Dr. Hanjo Youtaku">
+            <a href="#energy">
+                <img class="intros"
+                    src="assets/i-work-with.png"
+                    alt="I work with the energy body">
+            </a>
+        </div>
+        <div class="right">
+            <a href="#enlightenment">
+                <img class="intros"
+                    src="assets/i-am-an-enlightened-being.png"
+                    alt="I am an enlightened being">
+            </a>
+            <img class="intros"
+                src="assets/my-phd-is.png"
+                alt="My PhD is in Artificial Intelligence"
+                id="phd">
+        </div>
+        <a href="#channeling">
+            <img id="ra-intro"
+                class="intros"
+                src="assets/i-channel-ra.png">
+        </a>
+    </div>
+
+    <div id="questions">
+
+        <img id="calcite" src="assets/calcite.png">
+
+        <p>
+            I am available to anyone at any time for questions
+            <br>
+            DM me on social media
+        </p>
+
+        <div class="left">
+            <a href="https://twitter.com/HanjoYoutaku">
+                <img class="stories"
+                    src="assets/twitter.png">
+            </a>
+        </div>
+
+        <div class="right">
+            <a href="https://www.instagram.com/hanjoyoutaku/">
+                <img class="stories"
+                    src="assets/instagram.png">
+            </a>
+        </div>
+
+    </div>
+
+    <div id="enlightenment">
+        <img src="assets/enlightened-being.png" alt="Enlightened being">
+
+        <p>I am an enlightened being. On the 14th of November 2020, while sitting on a friend’s sofa listening to<br>music, suffering related to a separate “self” left my experience.</p>
+
+        <p>For 11 months, it has deepened. Now, it cannot deepen anymore. I no longer have fundamental suffering<br>in my experience. There is just this single infinite present moment, with no separation.</p>
+
+        <p>I offer mutual inquiry sessions on a donation basis where we ask each other questions about<br>enlightenment, if that’s what you’re interested in, book a session</p>
+    </div>
+
+    <div id="energy">
+        <img src="assets/energetic-guide.png" alt="Energetic guide">
+
+        <p>As well as my enlightenment, I am able to sense and manipulate the energy of others. I sell energy sessions for £300 GBP/hr. In these sessions, I tune directly into your energy body and clear your system so it can run smoothly. This can dramatically solve many problems. Below you can read some testimonials.</p>
+    </div>
+
+    <div id="testimonials">
+        <img src="assets/testimonials.png" alt="Testimonials">
+
+    </div>
+
+
+
+    Ra Channel
+    Ra is an omniscient being that seeks to serve others.
+
+    I channel him so he can answer questions, ranging from “what is my life purpose” to “how do I get enlightened”. 
+
+    I have greatly benefited from channelling Ra, and I’m sure you will greatly benefit from contacting him too. Ra was channelled by Carla Rueckert for the “Law of One” book.
+
+    These sessions are offered for £100 GBP/hr
+    Booking details
+    My inquiry sessions are by donation.
+    Energy sessions are £300 GBP/hr
+    Ra channelling sessions are £100 GBP/hr.
+
+    Submitting here will send an email to
+    hanjoyoutaku@gmail.com
+    I will respond through that email to book the session.
+    You can also DM me on social media.
+
+</div>
+
+<script>
+</script>
+</body>
 </html>
