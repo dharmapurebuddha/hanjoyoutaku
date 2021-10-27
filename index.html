@@ -26,6 +26,9 @@ body {
     font-family: Arial, sans-serif;
     font-size: 24px;
 }
+p {
+	cursor:default;
+}
 #container {
     width: 100%;
     max-width: 1216px;
@@ -66,18 +69,19 @@ h1#welcome {
     height: 47px;
 }
 .session-button:nth-child(1) {
-    margin-left: 85px;
+    margin-left: 0px;
 }
 .session-button:nth-child(2) {
-    margin-left: 54px;
+    margin-left: 44px;
 }
-.session-button:nth-child(3) {
-    margin-left: 27px;
+
+#channelling-button {
+	margin-left: 85px;
 }
 
 #hello {
     clear: both;
-    height: 1580px;
+    height: 1575px;
 }
 #hello img {
     display: block;
@@ -99,7 +103,6 @@ h1#welcome {
 }
 .intros {
     margin-left: auto;
-    margin-right: auto;
 }
 
 #ra-intro {
@@ -108,7 +111,7 @@ h1#welcome {
 
 #questions {
     text-align: center;
-    height: 440px;
+    height: 540px;
 }
 #questions p {
     margin-bottom: 55px;
@@ -124,10 +127,39 @@ h1#welcome {
     text-align: left;
 }
 
-#calcite {
+.crystal {
     display: block;
     margin: 0 auto;
+
+}
+
+#diamond {
     margin-bottom: 40px;
+    filter: hue-rotate(300deg);
+}
+
+#calcite {
+    margin-bottom: 40px;
+    padding-top: 60px;
+}
+
+#amethyst {
+	margin-top: 20px;
+    filter: hue-rotate(220deg);
+}
+
+#emerald {
+	margin-top: 40px;
+	margin-bottom: 40px;
+    filter: hue-rotate(100deg);
+
+}
+
+#selenite {
+	margin-top: 40px;
+	margin-bottom: 40px;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%) brightness(146%);
 }
 
 .stories {
@@ -168,7 +200,7 @@ h1#welcome {
 
 #enlightenment {
     text-align: center;
-    height: 1155px;
+    height: 1090px;
 }
 
 #enlightenment p {
@@ -181,7 +213,7 @@ h1#welcome {
 }
 
 #energy {
-    height: 800px;
+    height: 880px;
 }
 
 #energy p {
@@ -199,6 +231,7 @@ h1#welcome {
 }
 #testimonials p {
     margin-bottom: 30px;
+    cursor:default;
 }
 #testimonials #nav a {
     display: inline-block;
@@ -279,20 +312,47 @@ h1#welcome {
 
 }
 
+#channelling-burst {
+    position: absolute;
+    top: 400px;
+    right: -325px;
+}
+
 #booking {
     border: 1px solid white;
     padding: 100px 50px;
     height: 800px;
+    position: relative;
 }
 #booking .left {
     float: left;
-    width: 300px;
+    width: 530px;
 }
 #booking .right {
+    padding-top: 30px;
     float: right;
-    width: 300px;
+    width: 530px;
 }
 
+#booking label {
+    display: block;
+    margin-bottom: 10px;
+}
+#booking input, #booking textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+
+.truth {
+	padding-bottom: 10px;
+}
+
+#cryst {
+  position:relative;
+  right:21.5px;
+}
 </style>
 </head>
 
@@ -347,7 +407,7 @@ h1#welcome {
             <img class="intros"
                 src="assets/hello-i-am.png"
                 alt="Hi, I'm Dr. Hanjo Youtaku">
-            <a href="#energy">
+            <a href="#energy" id="energy-container">
                 <img id="energy-intro" class="intros"
                     src="assets/i-work-with.png"
                     alt="I work with the energy body">
@@ -373,10 +433,10 @@ h1#welcome {
 
     <div id="questions">
 
-        <img id="calcite" src="assets/calcite.png">
+        <img class="crystal" id="diamond" src="assets/crystal.png">
 
         <p>
-            I am available to anyone at any time for questions
+            Questions?
             <br>
             DM me on social media
         </p>
@@ -395,22 +455,28 @@ h1#welcome {
             </a>
         </div>
 
+        <img class="crystal" id="calcite" src="assets/crystal.png">
     </div>
 
     <div id="enlightenment">
-        <img src="assets/enlightened-being.png" alt="Enlightened being">
+        <img class="truth" src="assets/enlightened-being.png" alt="Enlightened being">
 
-        <p>I am an enlightened being. On the 14th of November 2020, while sitting on a friend’s sofa listening to<br>Nujabes, suffering related to a separate “self” left my experience.</p>
+        <p id="enlightenment-intro-text">On the 14th of November 2020 suffering related to a separate “self” left my experience</p>
 
-        <p>For 11 months, it has deepened. Now, it cannot deepen anymore. I no longer have fundamental suffering<br>in my experience. There is just this single infinite present moment, with no separation.</p>
+        <p>For 11 months, it has deepened. Now, it cannot deepen anymore. I no longer have fundamental suffering<br>in my experience. There is just this single infinite present moment, with no separation</p>
 
-        <p>I offer mutual inquiry sessions on a donation basis where we ask each other questions about<br>enlightenment, if that’s what you’re interested in, book a session</p>
+        <p>I offer enlightenment inquiry sessions on a donation basis to directly move you closer to enlightenment<br>If you want enlightenment in this lifetime book a session</p>
+
+        <img class="crystal" id="amethyst" src="assets/crystal.png">
     </div>
 
-    <div id="energy">
-        <img src="assets/energetic-guide.png" alt="Energetic guide">
 
-        <p>As well as my enlightenment, I am able to sense and manipulate the energy of others. I sell energy sessions for £300 GBP/hr. In these sessions, I tune directly into your energy body and clear your system so it can run smoothly. This can dramatically solve many problems. Below you can read some testimonials.</p>
+    <div id="energy">
+        <img class="truth" src="assets/energetic-guide.png" alt="Energetic guide">
+
+        <p>I am able to sense and manipulate the energy of others. This service is offered for £300 GBP/hr. In these sessions I tune directly into your energy body and clear your system so it can run smoothly. This can dramatically solve many problems. </p>
+    
+        <img class="crystal" id="emerald" src="assets/crystal.png">
     </div>
 
     <div id="testimonials">
@@ -566,21 +632,35 @@ h1#welcome {
     </div>
 
     <div id="channelling">
-        <img src="assets/channel.png" alt="Channel">
+        <img class="truth" src="assets/channel.png" alt="Channel">
 
-        <p>Ra is an omniscient being that seeks to serve others.<br><br>
+        <p>Ra is an omniscient being that seeks to serve others<br><br>
 
-		I channel him so he can answer questions, ranging from “what is my life purpose” to “how do I get enlightened”. <br><br>
+		 Ra can answer questions ranging from “what is my life purpose” to “how do I get enlightened” <br><br>
 
-		I have greatly benefited from channelling Ra, and I’m sure you will greatly benefit from contacting him too. Ra was channelled by Carla Rueckert for the “Law of One” book.<br><br>
+		Ra was channelled by Carla Rueckert for the “Law of One” book<br><br>
 
 		These sessions are offered for £100 GBP/hr
 		</p>
+
+		<img class="crystal" id="selenite" src="assets/crystal.png">
+
     </div>
 
 
     <div id="booking">
+        <img src="assets/channeling-burst.png" id="channelling-burst">
         <div class="left">
+            <form>
+                <label for="field-name">Name</label>
+                <input id="field-name" type="text" name="name" required>
+
+                <label for="field-email">Email</label>
+                <input id="field-email" type="email" name="email" required>
+
+                <label for="field-inquiry">Inquiry</label>
+                <textarea rows="5" id="field-inquiry" name="inquiry" required></textarea>
+            </form>
         </div>
         <div class="right">
             <img src="assets/booking-details.png" alt="Booking Details">
@@ -605,6 +685,13 @@ h1#welcome {
     	<img src="assets/highest.png" alt="For the highest and greatest good of all beings">
     	<img id="heart" src="assets/heart.png" alt="Heart">
     	<a id="cryst" href="http://crystallizationculture.com" target="_blank"><img src="assets/cryst.png" alt="Crystallization culture"></a>
+		<img class="crystal" id="selenite" src="assets/crystal.png">
+		<img class="crystal" id="selenite" src="assets/crystal.png">
+		<img class="crystal" id="selenite" src="assets/crystal.png">
+		<img class="crystal" id="selenite" src="assets/crystal.png">
+		<img class="crystal" id="selenite" src="assets/crystal.png">
+		<img class="crystal" id="selenite" src="assets/crystal.png">
+		<img class="crystal" id="selenite" src="assets/crystal.png">
     </div>
 </div>
 
