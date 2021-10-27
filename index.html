@@ -314,8 +314,9 @@ h1#welcome {
 
 #channelling-burst {
     position: absolute;
-    top: 400px;
-    right: -325px;
+    top: -380px;
+    right: -270px;
+    z-index: -1;
 }
 
 #booking {
@@ -340,10 +341,16 @@ h1#welcome {
 }
 #booking input, #booking textarea {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
     padding: 10px;
 }
-
+#booking p {
+    margin-bottom: 20px;
+}
+#booking button {
+    margin-top: 25px;
+    padding: 20px 50px;
+}
 
 .truth {
 	padding-bottom: 10px;
@@ -357,8 +364,6 @@ h1#welcome {
 #blessing #crystal-grid {
 	margin-top: 40px;
 }
-
-
 
 </style>
 </head>
@@ -515,7 +520,7 @@ h1#welcome {
                     <div class="right">
                         <h3>Jane</h3>
 
-                        <p>Hanjo and I have done four sessions over the better part of a year.
+                        <p>Hanjo and I have done four sessions over the better part of a year.</p>
 
                         <p>I didn’t really feel my energy body before I started working with him. The occasional psychedelic-induced kundalini stuff, but that’s it. I wasn’t exactly skeptical, more ambivalent. I booked a session with him when I saw how over-the-moon his reviews were. “I gotta find out what this guy is about.”</p>
 
@@ -651,9 +656,7 @@ h1#welcome {
 		</p>
 
 		<img class="crystal" id="selenite" src="assets/crystal.png">
-
     </div>
-
 
     <div id="booking">
         <img src="assets/channeling-burst.png" id="channelling-burst">
@@ -667,6 +670,8 @@ h1#welcome {
 
                 <label for="field-inquiry">Inquiry</label>
                 <textarea rows="5" id="field-inquiry" name="inquiry" required></textarea>
+
+                <button type="submit">Submit</button>
             </form>
         </div>
         <div class="right">
