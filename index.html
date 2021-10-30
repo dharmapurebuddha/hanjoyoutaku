@@ -245,8 +245,14 @@ h1#welcome {
     background-color: white;
 }
 
-#channelling {
+.truth {
+    display: block;
+    width: 100%;
+}
 
+#channelling {
+    max-width: 1216px;
+    width: 100%;
 	text-align: center;
 }
 
@@ -319,38 +325,75 @@ h1#welcome {
     z-index: -1;
 }
 
-#booking {
+#connecting {
     border: 1px solid white;
-    padding: 100px 50px;
-    height: 800px;
+    padding: 100px 25px;
     position: relative;
-}
-#booking .left {
-    float: left;
-    width: 530px;
-}
-#booking .right {
-    padding-top: 30px;
-    float: right;
-    width: 530px;
-}
 
-#booking label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#connecting #booking-details {
+    width: 50%;
+    margin-top: 30px;
+}
+#connecting #email {
+    width: 100%;
+    padding: 0px 25px;
+}
+#connecting #email label {
     display: block;
     margin-bottom: 10px;
 }
-#booking input, #booking textarea {
+#connecting #email input, #connecting #email textarea {
     width: 100%;
     margin-bottom: 25px;
     padding: 10px;
 }
-#booking p {
-    margin-bottom: 20px;
-}
-#booking button {
+#connecting #email button {
     margin-top: 25px;
     padding: 20px 50px;
 }
+#connecting #connect {
+    text-align: right;
+}
+
+#connecting #definition {
+    padding-top: 30px;
+    padding: 0px 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#connecting #definition p {
+    margin-bottom: 20px;
+}
+
+#connecting #definition #dm {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#connecting #definition #dm .left {
+    width: 100%;
+    margin-right: 10px;
+}
+#connecting #definition #dm .right {
+    width: 100%;
+    margin-left: 10px;
+}
+#connecting #definition #dm img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1216px) {
+    #connecting {
+        flex-direction: column-reverse;
+    }
+}
+
 
 .truth {
 	padding-bottom: 10px;
@@ -658,9 +701,9 @@ h1#welcome {
 		<img class="crystal" id="selenite" src="assets/crystal.png">
     </div>
 
-    <div id="booking">
+    <div id="connecting">
         <img src="assets/channeling-burst.png" id="channelling-burst">
-        <div class="left">
+        <div id="email">
             <form>
                 <label for="field-name">Name</label>
                 <input id="field-name" type="text" name="name" required>
@@ -671,11 +714,14 @@ h1#welcome {
                 <label for="field-inquiry">Inquiry</label>
                 <textarea rows="5" id="field-inquiry" name="inquiry" required></textarea>
 
-                <button type="submit">Submit</button>
+                <div id="connect">
+                    <button type="submit">Submit</button>
+                </div>
             </form>
         </div>
-        <div class="right">
-            <img src="assets/booking-details.png" alt="Booking Details">
+
+        <div id="definition">
+            <img id="booking-details" src="assets/booking-details.png" alt="Booking Details">
 
             <p>
                 My inquiry sessions are by donation.<br>
@@ -689,6 +735,23 @@ h1#welcome {
                 I will respond through that email to book the session.<br>
                 You can also DM me on social media.
             </p>
+
+            <div id="dm">
+                <div class="left">
+                    <a target="_blank" href="https://twitter.com/HanjoYoutaku">
+                        <img class="stories"
+                            src="assets/twitter.png">
+                    </a>
+                </div>
+
+                <div class="right">
+                    <a target="_blank" href="https://www.instagram.com/hanjoyoutaku/">
+                        <img class="stories"
+                            src="assets/instagram.png">
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 
