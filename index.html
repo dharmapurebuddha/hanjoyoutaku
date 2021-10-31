@@ -7,6 +7,9 @@
 <title>Hanjo Youtaku</title>
 
 <style>
+html {
+    scroll-padding-top: 186px;
+}
 
 * {
     vertical-align: baseline;
@@ -25,42 +28,53 @@ body {
     color: white;
     font-family: Arial, sans-serif;
     font-size: 24px;
+    padding-bottom: 100px;
 }
 p {
 	cursor:default;
 }
-#container {
+.container {
     width: 100%;
-    max-width: 1216px;
+    max-width: 1248px;
     margin: 0 auto;
-    margin-bottom: 100px;
 }
-
-h3 {
-    font-size: 64px;
-    margin-bottom: 20px;
-    font-weight: bold;
+#aesthetic {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 10000;
 }
 
 h1#welcome {
     margin-top: 50px;
+    padding: 20px;
+    padding-bottom: 0;
     width: 100%;
 }
 #welcome img {
     width: 100%;
 }
 
-.portal-container {
+#portals {
     width: 100%;
-    clear: both;
-    height: 200px;
+    padding: 20px 0;
     margin-bottom: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1248px) {
+    #portals {
+        justify-content: space-around;
+    }
+    .portal-room:nth-child(2) {
+        display: none;
+    }
 }
 .portal-room {
-    float: left;
 }
 .portal-room:last-child {
-    float: right;
 }
 .portal {
     display: block;
@@ -80,33 +94,8 @@ h1#welcome {
 }
 
 #hello {
-    clear: both;
-    height: 1575px;
-}
-#hello img {
-    display: block;
-}
-#hello .left {
-    float: left;
-    width: 595px;
-    text-align: right;
-}
-#hello .right {
-    float: right;
-    width: 595px;
-    text-align: left;
-}
-
-#phd {
-    margin-top: 110px;
-
-}
-.intros {
-    margin-left: auto;
-}
-
-#ra-intro {
-    margin-top: 220px;
+    width: 100%;
+    margin-bottom: 50px;
 }
 
 #questions {
@@ -144,20 +133,21 @@ h1#welcome {
 }
 
 #amethyst {
-	margin-top: 20px;
+	margin-top: 60px;
+	margin-bottom: 100px;
     filter: hue-rotate(220deg);
 }
 
 #emerald {
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-top: 60px;
+	margin-bottom: 100px;
     filter: hue-rotate(100deg);
 
 }
 
 #selenite {
-	margin-top: 40px;
-	margin-bottom: 40px;
+	margin-top: 60px;
+	margin-bottom: 100px;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%) brightness(146%);
 }
@@ -200,20 +190,19 @@ h1#welcome {
 
 #enlightenment {
     text-align: center;
-    height: 1090px;
 }
 
 #enlightenment p {
-    padding: 30px;
+    margin: 30px;
 }
 
-#enlightenment p:last-child {
-    margin-top: 20px;
+#enlightenment p.bordered {
+    padding: 30px;
     border: 1px solid white;
 }
 
 #energy {
-    height: 880px;
+	text-align: center;
 }
 
 #energy p {
@@ -244,6 +233,12 @@ h1#welcome {
 #testimonials #nav a.active {
     background-color: white;
 }
+#testimonials h3 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
 
 .truth {
     display: block;
@@ -251,13 +246,7 @@ h1#welcome {
 }
 
 #channelling {
-    max-width: 1216px;
     width: 100%;
-	text-align: center;
-}
-
-#energy {
-
 	text-align: center;
 }
 
@@ -305,6 +294,11 @@ h1#welcome {
     position: absolute;
     top: 400px;
     left: -325px;
+}
+@media screen and (max-width: 1248px) {
+    #resonance-burst {
+        display: none;
+    }
 }
 
 #blessing img {
@@ -388,20 +382,26 @@ h1#welcome {
     width: 100%;
 }
 
-@media screen and (max-width: 1216px) {
+@media screen and (max-width: 1248px) {
     #connecting {
         flex-direction: column-reverse;
     }
 }
 
-
 .truth {
 	padding-bottom: 10px;
 }
 
+#hearts {
+    width: 100%;
+}
+#highest-greatest-good {
+    width: 95%;
+}
+
 #cryst {
-  position:relative;
-  right:21.5px;
+    position: relative;
+    right: 21.5px;
 }
 
 #blessing #crystal-grid {
@@ -413,78 +413,57 @@ h1#welcome {
 
 <body>
 
-<div id="container">
-
+<div class="container">
     <h1 id="welcome">
         <img src="assets/hanjo-youtaku.png" alt="Hanjo Youtaku">
     </h1>
+</div>
 
-    <div id="portals" class="portal-container">
+<div id="aesthetic">
+    <div class="container">
+        <div id="portals">
 
-        <div class="portal-room">
-            <a id="home-portal"
-                class="portal"
-                href="#home">
-                <img src="assets/home.png" alt="Home">
-            </a>
-        </div>
+            <div class="portal-room">
+                <a id="home-portal"
+                    class="portal"
+                    href="#welcome">
+                    <img src="assets/home.png" alt="Home">
+                </a>
+            </div>
 
-        <div class="portal-room">
-            <a id="enlightenment-portal"
-                class="portal session-button"
-                href="#enlightenment">
-                <img id="enlightenment-button" src="assets/enlightenment.png" alt="Enlightenment">
-            </a>
-            <a id="energy-portal"
-                class="portal session-button"
-                href="#energy">
-                <img id="energy-button" src="assets/energy.png" alt="Energy">
-            </a>
-            <a id="channeling-portal"
-                class="portal session-button"
-                href="#channelling">
-                <img id="channelling-button" src="assets/channeling.png" alt="Channeling">
-            </a>
-        </div>
+            <div class="portal-room">
+                <a id="enlightenment-portal"
+                    class="portal session-button"
+                    href="#enlightenment">
+                    <img id="enlightenment-button" src="assets/enlightenment.png" alt="Enlightenment">
+                </a>
+                <a id="energy-portal"
+                    class="portal session-button"
+                    href="#energy">
+                    <img id="energy-button" src="assets/energy.png" alt="Energy">
+                </a>
+                <a id="channeling-portal"
+                    class="portal session-button"
+                    href="#channelling">
+                    <img id="channelling-button" src="assets/channeling.png" alt="Channeling">
+                </a>
+            </div>
 
-        <div class="portal-room">
-            <a id="contact-portal"
-                class="portal"
-                href="#contact">
-                <img id="bookasession-button" src="assets/book-a-session.png" alt="Book A Session">
-            </a>
+            <div class="portal-room">
+                <a id="contact-portal"
+                    class="portal"
+                    href="#connecting">
+                    <img id="bookasession-button" src="assets/book-a-session.png" alt="Book A Session">
+                </a>
+            </div>
         </div>
     </div>
+</div>
 
 
-    <div id="hello">
-        <div class="left">
-            <img class="intros"
-                src="assets/hello-i-am.png"
-                alt="Hi, I'm Dr. Hanjo Youtaku">
-            <a href="#energy" id="energy-container">
-                <img id="energy-intro" class="intros"
-                    src="assets/i-work-with.png"
-                    alt="I work with the energy body">
-            </a>
-        </div>
-        <div class="right">
-            <a href="#enlightenment">
-                <img id="enlightenment-intro" class="intros"
-                    src="assets/i-am-an-enlightened-being.png"
-                    alt="I am an enlightened being">
-            </a>
-            <img class="intros"
-                src="assets/my-phd-is.png"
-                alt="My PhD is in Artificial Intelligence"
-                id="phd">
-        </div>
-        <a href="#channelling">
-            <img id="channelling-intro" id="ra-intro"
-                class="intros"
-                src="assets/i-channel-ra.png">
-        </a>
-    </div>
+
+<div class="container">
+    <img id="hello" src="assets/hello.png" alt="Hi, I'm Dr. Hanjo Youtaku. I am an enlightened being. I work with the energy body. My PhD is in Artificial Intelligence.">
 
     <div id="questions">
 
@@ -520,7 +499,7 @@ h1#welcome {
 
         <p>For 11 months, it has deepened. Now, it cannot deepen anymore. I no longer have fundamental suffering<br>in my experience. There is just this single infinite present moment, with no separation</p>
 
-        <p>I offer enlightenment inquiry sessions on a donation basis to directly move you closer to enlightenment<br>If you want enlightenment in this lifetime book a session</p>
+        <p class="bordered">I offer enlightenment inquiry sessions on a donation basis to directly move you closer to enlightenment<br>If you want enlightenment in this lifetime book a session</p>
 
         <img class="crystal" id="amethyst" src="assets/crystal.png">
     </div>
@@ -756,8 +735,8 @@ h1#welcome {
     </div>
 
     <div id="blessing">
-    	<img src="assets/hearts.png" alt="Hearts">
-    	<img src="assets/highest.png" alt="For the highest and greatest good of all beings">
+    	<img src="assets/hearts.png" alt="Hearts" id="hearts">
+    	<img src="assets/highest.png" alt="For the highest and greatest good of all beings" id="highest-greatest-good">
     	<img id="heart" src="assets/heart.png" alt="Heart">
     	<a id="cryst" href="http://crystallizationculture.com" target="_blank"><img src="assets/cryst.png" alt="Crystallization culture"></a>
 		<img id="crystal-grid"  src="assets/crystal-grid.png">
