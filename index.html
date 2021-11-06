@@ -100,26 +100,34 @@ h1#welcome {
 
 #questions {
     text-align: center;
-    height: 540px;
 }
 #questions p {
     margin-bottom: 55px;
 }
-#questions .left {
-    float: left;
-    width: 595px;
-    text-align: right;
+
+#question-answers {
+    width: 100%;
+    max-width: 1248px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-#questions .right {
-    float: right;
-    width: 595px;
-    text-align: left;
+#question-answers .left {
+    width: 100%;
+    margin-right: 10px;
+}
+#question-answers .right {
+    margin-left: 10px;
+    width: 100%;
+}
+
+#question-answers img {
+    width: 100%;
 }
 
 .crystal {
     display: block;
     margin: 0 auto;
-
 }
 
 #diamond {
@@ -128,7 +136,7 @@ h1#welcome {
 }
 
 #calcite {
-    margin-bottom: 40px;
+    margin-bottom: 100px;
     padding-top: 60px;
 }
 
@@ -193,11 +201,13 @@ h1#welcome {
 }
 
 #enlightenment p {
-    margin: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
 }
 
 #enlightenment p.bordered {
-    padding: 30px;
+    padding: 20px;
     border: 1px solid white;
 }
 
@@ -206,7 +216,7 @@ h1#welcome {
 }
 
 #energy p {
-    padding-top: 25px;
+    padding: 20px;
 }
 
 #testimonials #intro {
@@ -217,6 +227,9 @@ h1#welcome {
 #testimonials #nav {
     width: 100%;
     text-align: center;
+}
+#testimonials #nav .nav-group {
+    display: inline-block;
 }
 #testimonials p {
     margin-bottom: 30px;
@@ -246,6 +259,7 @@ h1#welcome {
 }
 
 #channelling {
+    padding: 20px;
     width: 100%;
 	text-align: center;
 }
@@ -255,19 +269,18 @@ h1#welcome {
 }
 
 #testimonials {
-    height: 1500px;
 }
 #resonance-container {
     background: linear-gradient(to bottom, white, black);
     padding: 2px;
     padding-bottom: 0;
-    height: 1400px;
+    min-height: 1400px;
 }
 #resonance {
     padding: 40px;
     background-color: black;
     position: relative;
-    height: 1400px;
+    min-height: 1400px;
 }
 
 #testimonials .left {
@@ -277,6 +290,9 @@ h1#welcome {
 #testimonials .right {
     float: right;
     width: 800px;
+}
+#testimonials #intro {
+    width: 80%;
 }
 
 .testimonial {
@@ -298,6 +314,14 @@ h1#welcome {
 @media screen and (max-width: 1248px) {
     #resonance-burst {
         display: none;
+    }
+    #testimonials .right {
+        float: none;
+        width: 100%;
+    }
+    .testimonial img {
+        margin-right: 20px;
+        margin-bottom: 20px;
     }
 }
 
@@ -465,41 +489,41 @@ h1#welcome {
 <div class="container">
     <img id="hello" src="assets/hello.png" alt="Hi, I'm Dr. Hanjo Youtaku. I am an enlightened being. I work with the energy body. My PhD is in Artificial Intelligence.">
 
+    <img class="crystal" id="diamond" src="assets/crystal.png">
+
     <div id="questions">
-
-        <img class="crystal" id="diamond" src="assets/crystal.png">
-
         <p>
             Questions?
             <br>
             DM me on social media
         </p>
+    </div>
 
+    <div id="question-answers">
         <div class="left">
             <a target="_blank" href="https://twitter.com/HanjoYoutaku">
                 <img class="stories"
                     src="assets/twitter.png">
             </a>
         </div>
-
         <div class="right">
             <a target="_blank" href="https://www.instagram.com/hanjoyoutaku/">
                 <img class="stories"
                     src="assets/instagram.png">
             </a>
         </div>
-
-        <img class="crystal" id="calcite" src="assets/crystal.png">
     </div>
+
+    <img class="crystal" id="calcite" src="assets/crystal.png">
 
     <div id="enlightenment">
         <img class="truth" src="assets/enlightened-being.png" alt="Enlightened being">
 
         <p id="enlightenment-intro-text">On the 14th of November 2020 suffering related to a separate “self” left my experience</p>
 
-        <p>For 11 months, it has deepened. Now, it cannot deepen anymore. I no longer have fundamental suffering<br>in my experience. There is just this single infinite present moment, with no separation</p>
+        <p>For 11 months, it has deepened. Now, it cannot deepen anymore. I no longer have fundamental suffering in my experience. There is just this single infinite present moment, with no separation</p>
 
-        <p class="bordered">I offer enlightenment inquiry sessions on a donation basis to directly move you closer to enlightenment<br>If you want enlightenment in this lifetime book a session</p>
+        <p class="bordered">I offer enlightenment inquiry sessions on a donation basis to directly move you closer to enlightenment. If you want enlightenment in this lifetime book a session</p>
 
         <img class="crystal" id="amethyst" src="assets/crystal.png">
     </div>
@@ -523,15 +547,19 @@ h1#welcome {
                 <img src="assets/resonance-burst.png" id="resonance-burst">
 
                 <div id="nav">
-                    <a href="#jane" class="active"></a>
-                    <a href="#jack"></a>
-                    <a href="#hans"></a>
-                    <a href="#ryan"></a>
-                    <a href="#fabio"></a>
-                    <a href="#cantide"></a>
-                    <a href="#kristen"></a>
-                    <a href="#steven"></a>
-                    <a href="#nick"></a>
+                    <div class="nav-group">
+                        <a href="#jane" class="active"></a>
+                        <a href="#jack"></a>
+                        <a href="#hans"></a>
+                        <a href="#ryan"></a>
+                        <a href="#fabio"></a>
+                    </div>
+                    <div class="nav-group">
+                        <a href="#cantide"></a>
+                        <a href="#kristen"></a>
+                        <a href="#steven"></a>
+                        <a href="#nick"></a>
+                    </div>
                 </div>
 
                 <div id="jane" class="testimonial visible">
