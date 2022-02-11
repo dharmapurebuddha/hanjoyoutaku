@@ -421,7 +421,6 @@ h1#welcome {
 #connecting #email button {
     margin-top: 25px;
     padding: 20px 50px;
-    cursor: pointer;
 }
 #connecting #connect {
     text-align: right;
@@ -524,11 +523,6 @@ h1#welcome {
                     href="#energy">
                     <img id="energy-button" src="assets/energy.png" alt="Energy">
                 </a>
-                <a id="channeling-portal"
-                    class="portal session-button"
-                    href="#channelling">
-                    <img id="channelling-button" src="assets/channeling.png" alt="Channeling">
-                </a>
             </div>
 
             <div class="portal-room">
@@ -549,31 +543,6 @@ h1#welcome {
 
     <img class="crystal" id="diamond" src="assets/crystal.png">
 
-    <div id="questions">
-        <p>
-            Questions?
-            <br>
-            DM me on social media
-        </p>
-    </div>
-
-    <div id="question-answers">
-        <div class="left">
-            <a target="_blank" href="https://twitter.com/HanjoYoutaku">
-                <img class="stories"
-                    src="assets/twitter.png">
-            </a>
-        </div>
-        <div class="right">
-            <a target="_blank" href="https://www.instagram.com/hanjoyoutaku/">
-                <img class="stories"
-                    src="assets/instagram.png">
-            </a>
-        </div>
-    </div>
-
-    <img class="crystal" id="calcite" src="assets/crystal.png">
-
     <div id="enlightenment">
         <img class="truth" src="assets/enlightened-being.png" alt="Enlightened being">
 
@@ -585,12 +554,36 @@ h1#welcome {
 
         <img class="crystal" id="amethyst" src="assets/crystal.png">
     </div>
+    <div id="questions">
+        <p>
+            Enlightenment writing on instagram
+            <br>
+            Message me on there if you have questions
+        </p>
+    </div>
+
+    <div id="question-answers">
+
+        <div class="right">
+            <a target="_blank" href="https://www.instagram.com/hanjoyoutaku/">
+                <img class="stories"
+                    src="assets/instagram.png">
+            </a>
+        </div>
+    </div>
+
+    <img class="crystal" id="calcite" src="assets/crystal.png">
+
 
 
     <div id="energy">
         <img class="truth" src="assets/energetic-guide.png" alt="Energetic guide">
 
-        <p>I am able to sense and manipulate the energy of others. This service is offered for £300 GBP/hr. In these sessions I tune directly into your energy body and clear your system so it can run smoothly. This can dramatically solve many problems. </p>
+        <p>In these sessions we offer an opportunity to transform your being into its highest potential. This service is offered with me and my wife Ananda Youtaku. These sessions are not for those who desire small changes, they are for a dramatic and essential change in who and what you are. <br><br>
+
+		The testimonials below are for my personal energy work. We discovered that working in unison was much more powerful and transformative.<br><br>
+		
+		The price of the session is $444.44 USD/hr</p>
     
         <img class="crystal" id="emerald" src="assets/crystal.png">
     </div>
@@ -751,23 +744,6 @@ h1#welcome {
         </div>
     </div>
 
-    <div id="channelling">
-        <img class="truth" src="assets/channel.png" alt="Channel">
-
-        <p>I channel Ra<br><br>
-
-        Ra is an omniscient being that seeks to serve others<br><br>
-
-		 Ra can answer questions ranging from “what is my life purpose” to “how do I get enlightened” <br><br>
-
-		Ra was channelled by Carla Rueckert for the “Law of One” book<br><br>
-
-		These sessions are offered for £100 GBP/hr
-		</p>
-
-		<img class="crystal" id="selenite" src="assets/crystal.png">
-    </div>
-
     <div id="connecting">
         <img src="assets/channeling-burst.png" id="channelling-burst">
         <div id="email">
@@ -792,15 +768,14 @@ h1#welcome {
 
             <p>
                 My inquiry sessions are by donation.<br>
-                Energy sessions are £300 GBP/hr<br>
-                Ra channelling sessions are £100 GBP/hr.
+                Energy transformation sessions are $444.44 USD/hr<br>
             </p>
 
             <p>
                 Submitting here will send an email to<br>
                 hanjoyoutaku@gmail.com<br>
                 I will respond through that email to book the session.<br>
-                You can also DM me on social media.
+				You can also DM me on social media.
             </p>
 
             <div id="dm">
